@@ -21,10 +21,10 @@ export default function TodoCard({ text, isDone, id }: TodoCardProps){
       </Text>
       <View style={styles.buttonContainer}>
         <Pressable onPress={() => alert("Aun no hago nada :(")}>
-          <Ionicons name="create-outline" color="#009FB7" size={24}/>
+          <Ionicons name="create-outline" color="#009FB7" size={30}/>
         </Pressable>
         <Pressable onPress={() => deleteTodo(id)}>
-          <Ionicons name="close-circle-outline" color="#C5283D" size={24}/>
+          <Ionicons name="close-circle-outline" color="#C5283D" size={30}/>
         </Pressable>
       </View>
     </View>
