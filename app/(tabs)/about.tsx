@@ -1,4 +1,4 @@
-import { styles } from "@/app/lib/styles";
+import { styles } from "@/app/lib/sharedStyles";
 import { Text, View } from "react-native";
 
 export default function About() {

@@ -3,11 +3,15 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#25292e",
+    backgroundColor: "#020122",
     justifyContent: "center",
     alignItems: "center",
   },
-  text: {
-    color: "#f2f2f2",
+  todosContainer: {
+    flex: 1,
+    width: "100%",
+  },
+  todosContainerContent: {
+    gap: 25,
   },
 });

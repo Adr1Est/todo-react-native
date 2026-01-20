@@ -1,12 +1,17 @@
-import { styles } from "@/app/lib/styles";
-import { Text, View } from "react-native";
+import TodoCard from "@/app/components/TodoCard";
+import { styles } from "@/app/lib/sharedStyles";
+import { useTodoStore } from "@/app/store/todoStore";
+import { FlatList, View } from "react-native";
 
 export default function Index() {
+  const todos = useTodoStore((state) => state.todos);
   return (
-    <View
-      style={styles.container}
-    >
-      <Text style={styles.text}>Edit app/index.tsx to edit this screen.</Text>
+    <View style={styles.container}>
+      <FlatList
+        data={todos}
+        renderItem={({item}) => <TodoCard text={item.task} isDone={item.isDone} id={item.id}/>}
+        keyExtractor={item => item.id.toString()}
+      />
     </View>
   );
 }
