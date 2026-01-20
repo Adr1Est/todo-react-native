@@ -1,7 +1,7 @@
 import { styles } from "@/app/components/TodoCard.styles";
+import { useTodoStore } from "@/app/store/todoStore";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { Pressable, Text, TouchableOpacity, View } from "react-native";
-import { useTodoStore } from "../store/todoStore";
 
 interface TodoCardProps {
   text: string;
