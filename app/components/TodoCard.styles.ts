@@ -8,7 +8,9 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     borderBottomWidth: 2,
     borderBottomColor: "#FF521B",
-    padding: 3,
+    padding: 10,
+    backgroundColor: "#272654",
+    borderRadius: 15,
   },
   cardText: {
     flex: 5,
@@ -24,6 +26,7 @@ export const styles = StyleSheet.create({
   buttonContainer: {
     flex: 1,
     flexDirection: "row",
+    justifyContent: "flex-end",
     gap: 5,
   }
 });
