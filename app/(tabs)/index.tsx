@@ -8,6 +8,8 @@ export default function Index() {
   return (
     <View style={styles.container}>
       <FlatList
+        style={styles.todosContainer}
+        contentContainerStyle={styles.todosContainerContent}
         data={todos}
         renderItem={({item}) => <TodoCard text={item.task} isDone={item.isDone} id={item.id}/>}
         keyExtractor={item => item.id.toString()}

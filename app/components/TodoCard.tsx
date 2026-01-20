@@ -6,6 +6,7 @@ import { useTodoStore } from "../store/todoStore";
 interface TodoCardProps {
   text: string;
   isDone: boolean;
+  id: number
 }
 
 export default function TodoCard({ text, isDone, id }: TodoCardProps){

@@ -8,14 +8,16 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     borderWidth: 2,
     borderBottomColor: "#FF521B",
-    width: "100%",
+    padding: 3,
   },
   cardText: {
     flex: 5,
+    fontSize: 20,
     color: "#f2f2f2",
   },
   completedTodo: {
     flex: 5,
+    fontSize: 20,
     color: "#f2f2f2",
     textDecorationLine: "line-through",
   },

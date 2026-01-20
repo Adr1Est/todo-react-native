@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
   },
   todosContainer: {
     flex: 1,
-    width: "100%",
+    width: "90%"
   },
   todosContainerContent: {
     gap: 25,
