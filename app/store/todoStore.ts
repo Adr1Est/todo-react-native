@@ -9,7 +9,7 @@ interface Todo {
 interface TodoStore {
   todos: Todo[];
   addTodo: (task: string) => void;
-  // toggleTodo: (id: number) => void;
+  toggleTodo: (id: number) => void;
   deleteTodo: (id: number) => void;
   reset: () => void;
 }
@@ -41,6 +41,9 @@ export const useTodoStore = create<TodoStore>((set, get, store) => ({
       task: task,
       isDone: false,
     }]
+  })),
+  toggleTodo: (id: number) => set((state) => ({
+    todos: state.todos.map(todo => todo.id === id ? { ...todo, isDone: !todo.isDone } : todo)
   })),
   deleteTodo: (id: number) => set((state) => ({
     todos: state.todos.filter(todo => todo.id !== id)

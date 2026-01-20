@@ -1,6 +1,6 @@
 import { styles } from "@/app/components/TodoCard.styles";
 import Ionicons from "@expo/vector-icons/Ionicons";
-import { Pressable, Text, View } from "react-native";
+import { Pressable, Text, TouchableOpacity, View } from "react-native";
 import { useTodoStore } from "../store/todoStore";
 
 interface TodoCardProps {
@@ -10,10 +10,15 @@ interface TodoCardProps {
 }
 
 export default function TodoCard({ text, isDone, id }: TodoCardProps){
+  const toggleTodo = useTodoStore((state) => state.toggleTodo);
   const deleteTodo = useTodoStore((state) => state.deleteTodo);
 
   return (
-    <View style={styles.cardContainer}>
+    <TouchableOpacity 
+      style={styles.cardContainer}
+      onPress={() => toggleTodo(id)}
+      activeOpacity={0.5}
+    >
       <Text 
         style={isDone ? styles.completedTodo : styles.cardText}
       >
@@ -27,6 +32,6 @@ export default function TodoCard({ text, isDone, id }: TodoCardProps){
           <Ionicons name="close-circle-outline" color="#C5283D" size={30}/>
         </Pressable>
       </View>
-    </View>
+    </TouchableOpacity>
   )
 };

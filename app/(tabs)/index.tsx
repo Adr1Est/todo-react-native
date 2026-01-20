@@ -1,3 +1,4 @@
+import EmptyDataCard from "@/app/components/EmptyDataCard";
 import TodoCard from "@/app/components/TodoCard";
 import { styles } from "@/app/lib/sharedStyles";
 import { useTodoStore } from "@/app/store/todoStore";
@@ -13,6 +14,7 @@ export default function Index() {
         data={todos}
         renderItem={({item}) => <TodoCard text={item.task} isDone={item.isDone} id={item.id}/>}
         keyExtractor={item => item.id.toString()}
+        ListEmptyComponent={<EmptyDataCard/>}
       />
     </View>
   );
