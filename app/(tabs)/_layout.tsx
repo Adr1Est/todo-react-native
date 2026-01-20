@@ -21,17 +21,17 @@ export default function TabLayout() {
         options={{
           title: "",
           tabBarIcon: ({ color, focused }) => (
-            <Ionicons name={ focused ? 'home-sharp' : 'home-outline' } color={color} size={24} />
+            <Ionicons name={ focused ? 'list' : 'list-outline' } color={color} size={24} />
           )
         }}
       />
 
       <Tabs.Screen
-        name="about"
+        name="newTodo"
         options={{
           title: "",
           tabBarIcon: ({ color, focused }) => (
-            <Ionicons name={ focused ? 'information-circle' : 'information-circle-outline' } color={color} size={24} />
+            <Ionicons name={ focused ? 'add-circle' : 'add-circle-outline' } color={color} size={24} />
           )
         }}
       />
