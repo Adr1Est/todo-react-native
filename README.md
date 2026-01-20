@@ -6,9 +6,11 @@
 
 ## Imágenes del Proyecto
 
-<img src="assets/images/todoreactnative_1.png" alt="todolist con react native" width="200" />
-<img src="assets/images/todoreactnative_2.png" alt="todolist con react native" width="200" />
-<img src="assets/images/todoreactnative_3.png" alt="todolist con react native" width="200" />
+<div style="display: flex; gap: 10px;">
+  <img src="assets/images/todoreactnative_1.png" alt="todolist con react native" width="200" />
+  <img src="assets/images/todoreactnative_2.png" alt="todolist con react native" width="200" />
+  <img src="assets/images/todoreactnative_3.png" alt="todolist con react native" width="200" />
+</div>
 
 ## Instalación local
 
