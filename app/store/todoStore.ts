@@ -15,11 +15,7 @@ interface TodoStore {
 }
 
 export const useTodoStore = create<TodoStore>((set, get, store) => ({
-  todos: [
-    { id: 1, task: "Hacer la comida antes de la 13:00h", isDone: true},
-    { id: 2, task: "Ir al gimnasio a las 18:30h de la tarde!", isDone: false},
-    { id: 3, task: "Cenar", isDone: false},
-  ],
+  todos: [],
   addTodo: (task: string) => set((state) => ({
     todos: [...state.todos, {
       id: state.todos.length + 1,
